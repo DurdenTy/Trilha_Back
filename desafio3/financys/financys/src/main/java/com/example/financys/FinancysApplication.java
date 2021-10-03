@@ -20,7 +20,7 @@ public class FinancysApplication {
 		* classe que busca api e os caminhos, e testei, tudo ok.
 		* */
 
-
+		/*
 		//Desafio 2
 
 		Category category = new Category(4, "Salário", "Recebimento de salário");
@@ -57,6 +57,7 @@ public class FinancysApplication {
 		entryController.create(entry2);
 
 		System.out.println(entryController.read());
+		*/
 
 	}
 
