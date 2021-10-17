@@ -50,7 +50,6 @@ public class EntryService {
 
         System.out.println( "Novo lançamento com ID: " + entry.getId() + " criada!");
 
-        //dtoChartList.add(mapToDTO(entry));
         return entryRepository.save(entry);
 
     }
