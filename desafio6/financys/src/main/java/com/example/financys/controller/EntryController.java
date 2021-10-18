@@ -29,7 +29,7 @@ public class EntryController {
 
     }
 
-    //@GetMapping("/lancamentos")
+ 
     public List<Entry> read(){
 
         return entryService.findAll();
@@ -37,21 +37,21 @@ public class EntryController {
     }
 
     @GetMapping("/lancamentos/{id}")
-    public ResponseEntity<Entry> findEntryById(@PathVariable() Long id) throws NotFoundException {
+    public ResponseEntity<Entry> findEntryById(@PathVariable Long id) throws NotFoundException {
 
         return entryService.findById(id);
 
     }
 
     @PutMapping("/lancamentos/{id}")
-    public ResponseEntity<Entry> update(@RequestBody Entry entry, @PathVariable() Long id) throws NotFoundException {
+    public ResponseEntity<Entry> update(@RequestBody Entry entry, @PathVariable Long id) throws NotFoundException {
 
         return entryService.update(id, entry);
 
     }
 
     @DeleteMapping("/lancamentos/{id}")
-    public void delete(@PathVariable() Long id) throws NotFoundException {
+    public void delete(@PathVariable Long id) throws NotFoundException {
         entryService.delete(id);
     }
 
