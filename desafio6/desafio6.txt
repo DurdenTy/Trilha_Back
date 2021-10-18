@@ -1,7 +1,0 @@
-DTO é um padrão de projeto é usado para trasnferência de dados entre os componentes de um projeto.
-É uma forma de permitir que apenas seja mostrado o que for necessário em uma aplicação, otmizando
-a comunicação da nossa aplicação com o servidor, dando até mais segurança, agrupando um conjunto
-de informaçãoes para melhorar nosso projeto. Por exemplo, um sistema de produtos, com milhares de
-produtos, seria desnecessário mostrar todo em uma mesma página, o cliente não precisa ver todos
-de uma vez e apenas procura um item, logo, o DTO mapeia, filtra e transporta apenas é
-necessário em uma aplicação.
