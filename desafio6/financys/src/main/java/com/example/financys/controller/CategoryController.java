@@ -35,21 +35,21 @@ public class CategoryController {
     }
 
     @GetMapping("/categorias/{id}")
-    public ResponseEntity<Category> findCategoryById(@PathVariable() Long id) throws NotFoundException {
+    public ResponseEntity<Category> findCategoryById(@PathVariable Long id) throws NotFoundException {
 
         return categoryService.findById(id);
 
     }
 
     @PutMapping("/categorias/{id}")
-    public ResponseEntity<Category> update(@RequestBody Category category, @PathVariable() Long id) throws NotFoundException {
+    public ResponseEntity<Category> update(@RequestBody Category category, @PathVariable Long id) throws NotFoundException {
 
         return categoryService.update(id, category);
 
     }
 
     @DeleteMapping("/categorias/{id}")
-    public void delete(@PathVariable() Long id) throws NotFoundException {
+    public void delete(@PathVariable Long id) throws NotFoundException {
 
         categoryService.deleteById(id);
 
