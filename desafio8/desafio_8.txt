@@ -1,0 +1,18 @@
+a) Exceptions são eventos que podem ocorrer em tempo de execução de código, não são erros, mas sim uma forma de expor ao
+programador algo inesperado que aconteceu no programa, por exemplo, se alguma entrada errada for adicionada ao programa e
+aconecer um erro por esse motivo, o programador precisa saber a causa, o programa não pode finalizar sem expor o motivo, por isso
+existem excetions, para tratar e planejar os possíveis erros que podem ocorrer, torna o código mais robusto.
+
+b)"try" tenta executar o código desejado pelo programador, é o local que é esperado que possa ocorrer algum erro, mas se não ocorrerem erros, o programa seguirá normalmente, mas caso aconteça, lançará uma alguma exceção que receberá alguma forma de tratamento ao ser capturado pelo "catch", que conterá um bloco de código dentro do seu escopo para esse propósito, os dois blocos funcionam juntos como um if-else. No caso do "finally", funciona da seguinte forma, se ocorrer algum erro, o finally tem a função de executar algum bloco de código, mesmo que ocorra ou não ocorra algum erro, sua função é garantir que o bloco de código dentro do seu escopo tenha garantia que será executado a qualquer custo.
+
+c) Na resposta acima explico o que é try, catch e finally, antes de explicar a relação com throws, preciso explicar o que "throws" faz.
+Throws é usado para declarar que um método ou trecho de código irá lançar alguma exceção esperada, não precisa de try/catch para ser usado, apenas a classe que implementar esse trecho de código, e essa exceção lançada precisa ser capturada e tratada, então entra os blocos try e catch, que são usados para tratar essa exceção da forma correta.
+
+d)A annotation @ExceptionHandler serve para marcar métodos que capturam erros específicos dentro de uma api e qualquer execção que possa ocorrer no programa é capturado por esse método, já que o spring configuration detecta a anitação ExceptionHandler. É uma forma bastante flexivel e ampla de lidar com muitos erros que podem ocorrer em uma api.
+
+e)O comando throw serve como um lançador de exceções, caso ocorra algum erro dentro do código.
+
+f)@ControllerAdvice é usado para um tratamento de erros mais amplo e global, tem um maior controle dos erros no código inteiro, diferente do @ExcetionHandler, que é mais localizado e para erros específicos, o @ControllerAdvice tem mais alcance, ao invés de apenas declarar uma classe expecífica para tratar cada um dos erros de forma dispersa, a classe com essa annotation funciona como uma central de erros de toda a aplicação. Em resumo, se usa @ExceptionHandler quando se precisa de um tratamento mais específico, mas se quer criar um controle central de erros do programa inteiro, se usa @ControllerAdvice.
+
+g)Conclusões: Exceptions são uma forma de tratar erros de forma mais eficiente e clara, saber o que expor ao cliente é a forma mais simples de comunicar o que está errado na aplicação e como ele pode resolver, tratar os erros da aplicação deixa o código mais fluido e robusto.
+ 
