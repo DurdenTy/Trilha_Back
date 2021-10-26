@@ -5,3 +5,7 @@ b)I) Padrão de criação visa abstrair o instanciamento de objetos, tem como ob
 II) Padrões estruturais visam em organizar da melhor forma as estruturar e as classes e relações entre classe/objetos dentro do projeto.
 
 III) Padrões comportamentais visam focar em como cada parte do código deve se comportar, qual a responsabilidade dentro do proejto, como irá fazê-lo e se como se comunicar.
+
+c)Arquitetura de software demonstra como organizar e dar sentido a cada componente de um sistema, seguir desde o início uma boa arquitetura em mente, deixa o código sair de forma menos desastroza, planejar e conectar cada componente ao outro dá o sentido e coesão necessária para criar um projeto robusto e escalável futuramente.
+
+d)Modelo usado foi em camadas.
