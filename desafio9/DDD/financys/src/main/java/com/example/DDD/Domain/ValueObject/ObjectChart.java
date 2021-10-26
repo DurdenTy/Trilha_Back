@@ -3,6 +3,7 @@ package com.example.DDD.Domain.ValueObject;
 import lombok.*;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ObjectChart {
