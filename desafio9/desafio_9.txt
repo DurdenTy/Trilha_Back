@@ -1,0 +1,7 @@
+a) Padrões de projetos são formas de estruturar o código de forma padronizada afim de encontrar soluções para problemas comuns em programas orientados a objetos, como o próprio nome diz, o intuito de adotar essas arquiteuras em softwares é trazer alguma solução já existente para problemas que se repetem na produção de sistemas, seja organização do código ou remover limitações que possam existir.
+
+b)I) Padrão de criação visa abstrair o instanciamento de objetos, tem como objetivo deixar o código mais flexivel e eficiente, ou seja, se um projeto necessitar de um objeto ele terá pronto para uso, sem se preocupar como é feita a criação de tal objeto.
+
+II) Padrões estruturais visam em organizar da melhor forma as estruturar e as classes e relações entre classe/objetos dentro do projeto.
+
+III) Padrões comportamentais visam focar em como cada parte do código deve se comportar, qual a responsabilidade dentro do proejto, como irá fazê-lo e se como se comunicar.
