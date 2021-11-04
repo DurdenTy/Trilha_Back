@@ -1,6 +1,0 @@
-NullPointerException  - Quando a aplicação tenta fazer referência a um objeto nulo.
-InvalidTestClassError - Quando uma classe que deseja ser testada não é válida.
-AssertionErrors - Quando ocorre um erro no teste, pode ser um erro esperado ou não.
-AssertionError: Status - O status do teste é diferente do esperado, acarretando falha.
-NoInteractionsWanted - Indicar até onde o teste pode interagir com o objeto.
-AssertionError: Content type not set - Quanto testa o controller, mas o controller retorna um objeto não identificado.
