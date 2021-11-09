@@ -1,0 +1,30 @@
+1)São funcionalidades encapsuladas em classes que podem ser reusadas em programas para facilitar a produção de aplicações,
+são como o próprio nome já diz, bibliotecas de classes ou funções.
+
+2)Mockito é uma biblioteca bastante usada para testes integrados e unitários.
+  Apache commons, é um conjunto bibliotecas que englobam muitas funcionalidades
+  que são de muita importância no desenvolvimento de programas.
+
+3) Maven é um gerenciador de dependências e auxiliador na construção de aplicações, ou seja, se o programa sendo
+   criado necessitar de alguma framework, com algumas poucas modificações o maven já cuida de baixar os arquivos necessários
+   para utilização no programa. A relação do maven com o pom.xml é que o pom é o lugar onde se faz essa modificação,
+   é um dos arquivos de configurações mais importantes e possui todas as informações básicas do projeto. Ao adicionar
+   a dependência(a framework que deseja ser aplicada no proejto) no pom, o maven interpreta o pom e aplica o que configurado.
+
+4) Gradle x Maven, maven usa xml e gradle não, o que deixa mais simples de ler e configurar as dependências
+   , os scripts em gradle são mais simples, maven é feito em java, já o gradle foi em java, gradle e kotlin
+   e por último o maven facilita muito no processo de criação, gerenciar relatórios, documentos e escrita de um código com boas práticas e 
+   já o gradle, ele é mais focado na estruturação e desempenho, sendo mais flexível e consistente.
+   
+5) I)Lib contém as classes que englobam os drivers, por exemplo, usei a dependência JPA que logo contém o driver do JDBC
+   e consegui fazer a conexão com o banco de dados MySQL.
+   
+   II)Importando o projeto diretamente como por exemplo, import javax.sql.* ou se estiver usando algum gerenciador de
+   projetos, como o Maven, o import das dependências é feita em formato jar e logo então será possível importar de forma
+   direta o que for necessário usar na aplicação.
+
+	
+   III)Primeiro eu configurei a depenência do JPA e SQLConnection no pom.xml, o maven logo localizou e baixou as dependências
+       necessárias para eu poder utilizar as funcionalidades dessas bibliotecas, em seguida configurei o application.properties
+       para o spring ler as configurações para identificar qual banco criado no MySQL irá fazer a conexão e persistência dos dados
+       através do JPA.
