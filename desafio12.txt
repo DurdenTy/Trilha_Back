@@ -1,0 +1,89 @@
+a)Spring é uma ferramenta que automatiza vários processas dentro de uma aplicação, facilitando uso de bibliotecas,
+  injenção de objetos, etc.
+
+b)JPA, responsável pela conexão da aplicação com o banco de dados e persitência das informações, Mockito, fazer testes
+  integrados/unitários e Lambok, remover código boiler plate do programa, facilitando métodos básicos como o get e set.
+
+c)Spring starter, spring web, modelmapper, mockito, junit, jpa, sqlconnection, lambok, h2 e validation.
+
+d)automatizar, aumentar o reuzo de código, uso de bibliotecas, uso de recursos , injetar dependências, annotations, otimizar o tempo
+  e aumentar produtividade. 
+
+e) Após baixar o spring spring initializr com as dependências necessárias, spring web, jpa, mysqlconnection, criar
+   as classes de controllers, services e repositories, configurar o application.properties para configurar o banco e lançar a aplicação,
+   possivelmente os dados da aplicação irão ser persistidos no banco de dados.
+
+f)Pom é onde o spring em conjunto com o maven tira todas as informações e dependências a serem usadas na aplicação.
+
+g) A proposta do application.properties é facilitar as configurações dentro da aplicação, seja em qual banco conectar, ou seja,
+   esse arquivo de configuração consiste em um conjunto de regras que devem ler lidas e aplicadas pelos o spring, na aplicação.
+
+h)No spring, o uso de annotations torna muito mais simples e automatiza as funcionalidades da aplicação, por exemplo, se
+  for necessário injetar uma dependência de objeto em outra classe, apenas usar o @Autowired torna isso pronto, sem usar tanto
+  código na aplicação, facilita a leitura e entendimento do código, tudo isso acessando as funcionalidades das bibliotecas
+  da aplicação com o uso de anotações.
+
+i)
+
+@Autowired: injeta uma dependência na classe desejada.
+
+@SpringBootApplication: Faz a varreduras dos componentes da aplicação em sub-pacotes.
+
+@Service: Indica uma classe de serviço que pode receber injeções de dependências.
+
+@Repository: Indica a classe de repositório da aplicação.
+
+@RestController: É uma anotação especial que marca as classes controller de aplicações REST, 
+                 essa anotação removeu a necessidade de usar duas anotações "@Controller, @ResponseBody".
+
+@GetMapping: Reduz a necessidade de usar duas anotações para mapear requisições REST HTTP
+
+@PostMapping:Reduz a necessidade de usar duas anotações para mapear requisições POST HTTP
+
+@DeleteMapping Reduz a necessidade de usar duas anotações para mapear requisições DELETE HTTP
+
+@PutMapping: Reduz a necessidade de usar duas anotações para mapear requisições UPDATE HTTP
+
+@Bean: Objeto que será instanciado e gerenciado pela aplicação, .
+
+j) Advices são ações ou regras que serão executadas no após, durante ou antes de algum ponto desejado da aplicação.
+
+  @Before, Ao usar essa anotação, o métoda terá a garantia que será executado antes de algum parâmetro passado,
+  por exemplo, o métedo com essa anotação será executado antes de serem executados os métodos da classe Service
+  serem chamados.
+  
+  @After, mesmo coisa da anotação acima, porém é executado após.
+  
+  @Around, garante que seja executado antes e depois da execução do método.
+  
+
+k)Sprint IoC(Inversion of Control) é o principio no qual o objetos difenem suas dependências e terão o controle dos objetos, ou seja, elas escolhem o que desejam
+  utilizar na sua funcionalidade a partir do container de dependências, chamadas através de anotações e instaciamentos no construtor, logo,
+  a classe que chama a dependência terá todo o controle do objeto criado.
+ 
+  IoC container é O container Spring é responsável por instanciar, configurar e montar objetos conhecidos como beans, bem como gerenciar seus ciclos de vida.
+
+l)Usar as dependências do spring segurity na aplicação e aplicar os conceitos para trazer mais segurança dos dados e código da aplicação.
+
+m)JPA e mysqlConnection.
+
+n) É uma forma executar um código em determinado ciclo, por exemplo, se eu quiser coletar dados de clientes se cadastrando
+   mensalmento no meu sistema, preciso apenas criar uma excução periódica de 30 dias em 30 dias para que meu sistema execute esse método nesse ciclo.
+
+   Abaixo o código é executado a cada hora.
+
+   @Component @EnableScheduling 
+      public class VerificadorDePegamentos {
+
+      private Long segundo = 1000;
+      private Long minuto = segundo * 60;
+      private Long HORA = minuto * 60;
+
+     @Scheduled(fixedDelay = HORA) 
+     public void verificaPorHora() {
+
+        // Código que realiza a consulta de fluxo de vendas 
+
+     }
+
+}
