@@ -1,0 +1,174 @@
+a)I)Criar um novo commit com as modificações das ramificações aplicada na branch principal. Mesclagem de avanço rápido.
+
+II)O objetivo é salvar nossas modificações feitas no projeto e deixar pronta para ser salva permanentemente em algum repositório remoto.
+
+III)"git add -A", "git add --all" e "git add ." no git versão 2.x os três comando adicionam arquivos modificados, deletados e novos ao stage.
+     Mas uma adendo é que o "git add --all" checa todos os arquivos independente do diretório em que foi usado, já o "git add ."
+     apenas checa a partir do diretório em que foi usado, logo é necessário atenção em cada comando usado.
+    "git add -u" adiciona apenas arquivos modificados e deletados ao stage.
+    
+IV)git status -uno, git add ., git commit -m, git push origin master.
+
+V)Sim, o desafio não abrange todos os comandos existentes do git, mas é um ponto inicial para pegar o básico, é necessário se aprofundar mais, é claro
+  e ficar atento as novas atualizações em caso de algum comando sofrer mudanças.
+
+b)I)Classes o qual se cria e mantém as entidades, onde se dá a identidade do objeto e cada entidade tem seus atributos e métodos de acesso, como getters e setters.
+
+II)Na minha visão, a orientação a objetos, assim como na vida real, tem o objetivo de criar ou transformar ferramentas reutilizaveis, objetos, items, etc, com o objetivo de simplificar máximo
+   possível e ao mesmo tempo dar ao objeto maior utilidade, ou seja, é um conceito que nos faz seguir boas práticas para criar pequenos pedaços de sistemas que trazem
+   muitos benefícios e cada um com sua funcionalidade dentro da aplicação, e formando como um todo um sistema baixo acoplado e que funciona com muita coesão abstraindo o
+   máximo possível e dando apenas funcionalidades necessárias aos objetos.
+
+III)Tornar o objeto encapsulado, ou seja, permitindo acesso e modificações dos atributos apenas a partir de funções internas da classe.
+
+IV)A ideia de construtor é definir com quais atributos iniciais a classe pode ser iniciada, um construtor pode ser vazio ou conter todos os atributos da classe.
+
+V) Sim, o desafio abrange muito bem os pilares de orientação a objetos, fora que eu já tinha uma boa base anteriormente, já estudei POO no meu curso e procurava outras formas de conhecimentos.
+
+c)I)Responder as requisições do usuário, geralmente essa camada se comunica com o service ou repository.
+
+II)As restrições e arquiteturas REST nos auxiliam no formato, forma e de como o cliento/servidor irá fazer a requisição dos dados.
+   Existem vários formados, não citarei todos, porém, o mais usado é o JSON. Além disso, os conjuntos de restrições e regras da arquitetura REST nos
+   auxiliam também na organização da nossa API e interfaces, e de como achar o padrão que mais se encaixa no objeto da aplicação.
+
+III) Get, Post, Put e Delete.
+
+IV) @RequestBody mapeia os valores da solicitação HTTP de acordo com o modelo criado no sistema, ou seja, a entidade.
+    @RequestParam pega o valor da solicitação HTTP e usa em algum método como parâmetro.
+    @PathVariable é usado para quando o valor é dinâmico, ou seja, é parte da url e não recupera o valor como um parâmetro.
+
+V) ResponseEntity serve para dar controle de toda a resposta HTTP, seja corpo, status ou cabeçalhos.
+
+VI)Sim, apesar do desafio não abordar o @RequestParam, consegui adquirir conhecimentos extras com o tutor e estudando mais a fundo o conteúdo.
+
+d)I) É a camada que mapeia as entidades, faz comunicação e o relacionamento com o banco de dados, dependendo do projeto a camada service ou controller faz comunicação com a repository.
+
+II) Retira da a dependência da classe a ser implementada e dá essa responsabilidade a classe que a implementa, ou seja, injetando a instância da classe no construtor da classe
+    implementadora, mas qual a relação de @Autowired? Essa anotação faz a injeção de depêndencia de forma mais simplificado, sem precisar adicionar no construtor
+    da classe implementadora.
+
+III)Flexibilidade da aplicação em trocar o banco de dados usado, eliminar necessidade de usar comandos sql, mapeamento de entidades para o banco de dados, já que o hibernate cuida disso junto com o JPA, conversão de dados do banco, etc.
+   
+
+IV)Baixar a dependência JPA, A dependência do banco de dados da escolha do programador, pode ser MySQL por exemplo
+   ter um banco de dados criados e rodando, e por último, configurar o caminho da conexão no application.properties.
+
+V)Sim, apesar de que como qualquer outro conteúdo, é preciso se aprofundar mais, por ser bastante extenso e com muitos detalhes a serem captados.
+
+e)I)Camada service serve para adicionar regras de negócios aos métodos, deixar outras camadas mais limpas, se comunicar com o repository, controller.
+
+II)Ao deixar um método com apenas um propósito, o acoplamento do código, bugs e complexidade cai considerávelmente, além de que fica fácil testar e deixar o código mais limpo para leitura e modificações.
+
+III)métodos voids não tem retorno, mas podem modificar atributos e dados, já métodos tipados retornam um valor e podem ser usados para outras funcionalidades.
+
+IV)Sim, um serviço pode ser usado para auxiliar o propósito de outro.
+
+V)Sim, é uma das partes mais simples da trilha, conhecer e aprender o propósito da camada de serviços é bem intuitivo.
+
+f)I)Seu propósito é transferência de dados, assim pode ser usado para evitar que conteúdos que não precisam ser mostrados
+    sejam liberados, deixar a comunicação entre sistemas mais leves, já que DTO elimina dados desnecessários.
+  
+  II) Deixa bastante código boiler plate no código, além de que pode criar bugs, já que se que a quantidade de atributos para serem
+      convertidos ao DTO for muito extenso.
+
+  III)Sim, usar o ModelMapper é super simples, auxilia bastante na conversão de dados e redução de códigos boiler plate.
+
+  IV)Sim, adquiri bem essa parte do desafio, usar o ModelMapper é bem simples, apesar que preciso me aprofundar mais e aprender o MapStruct em conjunto.
+
+g)I)Existem várias formas, podem ser usadas regras de negócios, enums, criar regras em conjunto com outras apis, pode usar o hibernate validator, a partir de testes, etc.
+
+II)Enum serve para definir um escopo de valores aceitáveis dentro da aplicação, por exemplo um Enum
+   com valores: 
+   public Enum Frutas{ 
+       Banana, Abacate, Uva, Tomate  
+   }
+   Se uma aplicação contém um método que aceita apenas frutas, podem ser passados apenas o objeto "Frutas" como tipo e ao
+   receber valores do usuário, só podem ser usados os valores contidos dentro do enum, é uma forma muito eficiente de validar valores.
+
+III)Ajustar da forma que desejarmos, de acordo com a nossa aplicação, modificar para que o resultado seja como esperamos, informar alguma mensagem de erro se preciso, etc.
+
+IV)Usar streams facilita a coleta de informações e separação, eficiência, reduz quantidade de código, deixa mais limpo e fácil de ler.
+
+V)Sim, o que foi pedido no desafio eu soube aplicar bem e absorvi, streams é simples de usar, achei bem prática.
+
+h)I) As vezes alguns erros precisam ser mostrados ao usuário, cliente ou programador, escrever mensagens personalizadas para mostrar o que deu errado,
+  qual o motivo e como resolver. Além de deixar o código mais robusto e preparado para possíveis ocorrências indesejáveis que possam surgir na execução.
+  
+  II)Com testes. Além disso, existem erros previsiveis como esperamos que podem acontecer e existem execptions mais abrangentes que coletam esses erros, logo, com essas duas
+     coisas em mentem, podemos criar nossas exceptions e lançá-las.
+
+  III)Provocando algum erro ao testar o nosso código.
+  
+  IV)Com a ajuda da anotação @ControllerAdvice, com isso podemos criar uma classe global que abrange todos os métodos que captam exceptions específicas e as lanças quando forem
+     necessárias.
+
+  V)Sim, é um conteúdo fácil de aprender e se for usada em conjunto com testes unitários, se torna uma ótima base.
+
+i)I)É um padrão de projeto que faz com que apenas exista uma única instância da classe sendo usada em toda a aplição.
+
+II)D deriva de DIP, dipendency inversion principle, princípio da inversão de dependência, o qual os modulos de alto nível
+   não devem depender de módulos de baixo nível, o propósito é deixar o nível de acoplamento do código no mínimo possível e
+   que caso seja necessário mudanças nas classes, não afetar as camadas acima, ou seja, a abstração é a chave desse pricípio.
+   A relação com o repository é a camada, a camada repository é a mais abstrata de todas, ela faz contato com o banco de dados e
+   a service/controller, logo, está abaixo na hierarquia criada na arquitetura e logo a camada repository não deve impactar as outras. 
+
+III)Organizar, Facilitar leitura, facilitar manuntenção, dar responsabilidades únicas a cada layer.
+
+IV)Essa pergunta não tem resposta, vai depender muito do sistema a ser implementado, não acho que tenha uma melhor, mas um padrão
+   que se aplique melhor em alguma situação.
+
+V)Sim, consegui abserover bem, apesar que é um assunto que precisa se aprofundar bem, e os princípios de SOLID eu estudei bastante, porque é precisa praticar para fixar,
+  recebi o desafio que apenas se tratava dos padrões clean e DDD.
+
+j)I)Java é uma linguagem de progapamação, Spring é uma framework que usa Java como base.
+
+II)Eu não tenho certeza, mas acho que não é possível, spring data está contido no spring framework, mas se pergunta se trata
+   da possibilidade de usar o spring data puro, não. E se a pergunta se trata de conexão para persistir dados, é possível usar banco de dados em memória.
+
+III)Sim, SpringBoot é a framework usada para criar os componentes do sistema em conjunto com a linguagem Java, SpringData é a parte
+    que cuida da persistência dos dados e manipulação no banco de dados, já o security se trata da segurança, apesar de que em nenhum desafio
+    o spring security foi pedido, fui recomendado pelo tutor de estudar o conteúdo.
+
+IV)Sim, o desafio 10 é bem teórico, apesar de que com a prática que o assunto fica fixo, os temas abordados nesse desafio
+   foram usados nos desafios anteriores.
+
+k)I)java.util, usei Listas, Streams.
+    javax.validation, usei para validar as requisições das end-points dos métodos.
+    lombok.*, usado para remover códigos boiler plate, auxiliar até na criação de objetos com o builder.0
+    org.springframework., contém anotações usadas para criar um aplicação e componentes muito úteis.
+    javax.persistence., contém funções e classes para auxiliar na persistência dos dados.
+
+
+II)Driver é uma única ferramenta usada para auxilidar um processos, Lib é um conjunto de funcionalidades.
+
+III)Não existe, mas é uma boa prática apenas usar o necessário e limpar as importações desnecessárias.
+
+IV)Para facilitar na automação das bibliotecas usadas na aplicação, auxiliando na adição ou remoção de bibliotecas usadas na aplicação.
+
+V)Sim, é um desafio bem básico, usar bibliotecas faz parte de todo o programa, seja simples ou complexo.
+
+l)I)DevOps precisa estar envolvido em todo ciclo do projeto, cada modificação precisa ter o olhar dele para dar
+  cobertura de testes em cada ciclo, o código mesmo estando finalizado não está pronto, ainda precisa ser checado, modificado
+  analisado, e esse ciclo é continuo.
+
+II)Mockito é uma ferramenta de testes focadas em criar instâncias de classes e facilitar nos testes de objetos e métodos, simular comportamentos e checar
+   o que está acontecendo nos ciclos de cada teste.
+
+III)Sonar é uma ferramenta de análise de código durante o ciclo de desenvolvimento de um software, ele análise o códogo para ter a certeza que está
+  dentro dos padrões, cuida também de checar códigos redundantes e evitar retrabalho.
+
+IV)Sim, mas foi o desafio mais desafiador de toda a trilha, a quantidade de conteúdo é muito extenso, mas ainda sim eu gostei
+   muito de ter aprendido mais sobre testes, e desejo me aprofundar muito mais nesse assunto, pricipalmente por ser uma parte
+   muito importante no desenvolvimento de softwares.
+
+m)I)Aconteceram bastantes erros por causa da aplicação no git estar com alguns erros, mas foi um processo não muito complexo, nunca mexi com angular, mas
+    foi bem tranquilo realizar a integração.
+
+II)Os erros que não foram da nossa(minha squad) parte, mas já foram corrigidos, configurar a porta, nunca mexi com angular, apenas essas duas coisas.
+
+III)Não, instalei a extensão no Chrome e não passei problema algum nem usando a annotaion.
+
+IV)CORS significa Cross-Origin Resource Sharing (ou Compartilhamento de Recursos de Origem Cruzada).
+   É uma ferramenta que facilita a troca de informações entre aplicações de domínios diferentes.
+
+V)Consegui, mas foi um assunto passado muito rápido, sinto a necessidade de estudar mais, vou buscar mais fontes.
